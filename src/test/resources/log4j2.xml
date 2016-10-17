@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%d{ISO8601} %-5p [%t] %c{1}: %m%n}" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <AsyncLogger name="yahoofinance" level="off" additivity="false">
+            <AppenderRef ref="STDOUT" />
+        </AsyncLogger>
+        <AsyncRoot level="info">
+            <AppenderRef ref="STDOUT" />
+        </AsyncRoot>
+    </Loggers>
+</Configuration>
